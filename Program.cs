@@ -235,6 +235,139 @@ else
 }
 
 
+//Ex 13. Write a C# Sharp program to read temperature in centigrade and display a suitable message according to temperature state below :
+/*Temp < 0 then Freezing weather
+Temp 0-10 then Very Cold weather
+Temp 10-20 then Cold weather
+Temp 20-30 then Normal in Temp
+Temp 30-40 then Its Hot
+Temp >=40 then Its Very Hot*/
+
+Console.WriteLine("Enter temperature");
+int t=int.Parse(Console.ReadLine());
+
+
+switch (t)
+{
+
+    case int n when (n < 0):
+        {
+            Console.WriteLine("Freezing weather");
+            break;
+        }
+
+    case int n when (n >= 0&& n<10):
+        {
+            Console.WriteLine("Very Cold weather");
+            break;
+        }
+
+    case int n when (n >= 10 && n < 20):
+        {
+            Console.WriteLine("Cold weather");
+            break;
+        }
+
+    case int n when (n >= 20 && n < 30):
+        {
+            Console.WriteLine("Normal temerature ");
+            break;
+        }
+
+    case int n when (n >= 30 && n < 40):
+        {
+            Console.WriteLine("Hot temerature ");
+            break;
+        }
+
+    case int n when (n >= 40 ):
+        {
+            Console.WriteLine("Very Hot");
+            break;
+        }
+
+}
+
+
+//Ex 14. Write a C# Sharp program to check whether a triangle is Equilateral, Isosceles or Scalene.
+
+Console.WriteLine("Enter 3 angles of triangle");
+Console.WriteLine("1st: ");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine("2nd: ");
+int b = int.Parse(Console.ReadLine());
+Console.WriteLine("3rd: ");
+int c = int.Parse(Console.ReadLine());
+
+
+if (a + b + c != 180)
+{
+    Console.WriteLine("Not possible triangle with entered angles");
+}
+else if (a == b && b == c)
+{
+    Console.WriteLine("Equilateral triangle");
+}
+else if (a == b || a == c || b == c)
+{
+    Console.WriteLine("Isosceles  triangle");
+}
+else
+{
+    Console.WriteLine("Scalene triangle");
+}
+
+
+//Ex 16. Write a C# Sharp program to check whether an alphabet is a vowel or consonant. 
+
+Console.WriteLine("Enter letter.");
+char c=char.Parse(Console.ReadLine());
+
+
+string vowel = "aeiou";
+
+if (vowel.Contains(c))
+{
+    Console.WriteLine("The alphabet is a vowel.");
+}
+else
+{
+    Console.WriteLine("The alphabet is a consonant.");
+
+}
+
+
+//Ex 17. Write a C# Sharp program to calculate profit and loss on a transaction.
+
+Console.WriteLine("Enter your cost price:");
+int cost=int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your selling price");
+int selling_price=int.Parse(Console.ReadLine());
+
+
+if (selling_price>cost)
+{
+    Console.WriteLine("Profit: "+(selling_price-cost));
+}
+else if (cost>selling_price)
+{
+    Console.WriteLine("Lost amount: " + (cost-selling_price ));
+}
+else
+{
+    Console.WriteLine("No loss no profit");
+}
+
+//Ex 
+
+//Ex 
+
+//Ex 
+
+//Ex 
+
+//Ex 
+
 
 
 
