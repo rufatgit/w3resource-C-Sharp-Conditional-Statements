@@ -358,7 +358,85 @@ else
     Console.WriteLine("No loss no profit");
 }
 
-//Ex 
+//Ex 19. Write a program in C# Sharp to accept a grade and declare the equivalent description :
+/*  Grade	Description
+    E	Excellent
+    V	Very Good
+    G	Good
+    A	Average
+    F	Fail               */
+
+
+Console.WriteLine("Enter grade:");
+char c = char.Parse(Console.ReadLine());
+
+if (c=='E')
+{
+    Console.WriteLine("Excellent");
+}
+else if (c=='V')
+{
+    Console.WriteLine("Very good");
+}
+else if (c=='G')
+{
+    Console.WriteLine("Good");
+}
+else if (c=='A')
+{
+    Console.WriteLine("Average");
+}
+else if (c=='F')
+{
+    Console.WriteLine("Fail");
+}
+else
+{
+    Console.WriteLine("No such a grade");
+}
+
+
+
+
+
+
+//Ex 20. Write a program in C# Sharp to read any day number in integer and display day name in the word.
+
+
+Console.WriteLine("Enter day of the week with number");
+int input = int.Parse(Console.ReadLine());
+
+
+switch (input)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+
+        case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    case 4:
+        Console.WriteLine("Thursday");
+        break;
+    case 5:
+        Console.WriteLine("Friday");
+        break;
+    case 6:
+        Console.WriteLine("Saturday");
+        break;
+    case 7:
+        Console.WriteLine("Sunday");
+        break;
+    default:
+        Console.WriteLine("Invalid day number: ");
+        break;
+
+}
+
 
 //Ex 
 
