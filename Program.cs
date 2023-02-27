@@ -438,13 +438,149 @@ switch (input)
 }
 
 
-//Ex 
+//Ex  21. Write a program in C# Sharp to read any digit, display in the word. 
 
-//Ex 
+Console.WriteLine("Enter digit");
+int input = int.Parse(Console.ReadLine());
 
-//Ex 
+switch (input)
+{
+    case 0:
+        Console.WriteLine("Zero");
+        break;
+    case 1:
+        Console.WriteLine("One");
+        break;
+    case 2:
+        Console.WriteLine("two");
+        break;
+    case 3:
+        Console.WriteLine("three");
+        break;
+    case 4:
+        Console.WriteLine("four");
+        break;
+    case 5:
+        Console.WriteLine("five");
+        break;
+    case 6:
+        Console.WriteLine("six");
+        break;
+    case 7:
+        Console.WriteLine("seven");
+        break;
+    case 8:
+        Console.WriteLine("eight");
+        break;
+    case 9:
+        Console.WriteLine("nine");
+        break;
 
-//Ex 
+
+
+    default:
+        Console.WriteLine("Input is not a digit");
+        break;
+}
+
+
+//Ex 22. Write a program in C# Sharp to read any Month Number in integer and display Month name in the word.
+
+Console.WriteLine("Enter number to show months");
+string[] months = new string[] {"January", "February", "March", "April", "May", "June", "July", "August", "September",
+    "October", "November", "December"
+  };
+
+int input = int.Parse(Console.ReadLine());
+
+if (input <= 0 || input > 12)
+{
+    Console.WriteLine("Invalid month number");
+    Environment.Exit(0);
+}
+
+
+string stringg =  input + "/01" + "/2002";
+
+DateTime dt = DateTime.Parse(stringg);
+Console.WriteLine("Your month with DateTime: " + dt.ToString("MMM"));
+
+--input;
+
+Console.WriteLine("Your month: " + months[input]);
+
+
+
+
+//Ex  23. Write a program in C# Sharp to read any Month Number in integer and display the number of days for this month. 
+
+Console.WriteLine("Enter month  number: ");
+int input = int.Parse(Console.ReadLine());
+
+int result = DateTime.DaysInMonth(DateTime.Now.Year, input);
+
+Console.WriteLine("No of days: "+result);
+
+
+
+//Ex  24. Calculate of area of circle
+
+Console.WriteLine("Enter  radius of circle: ");
+int input=int.Parse(Console.ReadLine());
+
+Console.WriteLine("The area is: "+3.14*input*input);
+
+
+
+
+//Ex 25. Write a program in C# Sharp which is a Menu-Driven Program to perform a simple calculation. 
+
+
+Console.WriteLine("Enter 1st int: ");
+double a = double.Parse(Console.ReadLine());
+Console.WriteLine("Enter 2nd int: ");
+double b = double.Parse(Console.ReadLine());
+
+
+Console.WriteLine("Here are the options: \n" +
+    "1 - Addition.\n" +
+"2 - Substraction.\n" +
+"3 - Multiplication.\n" +
+"4 - Division.\n" +
+"5 - Exit.");
+
+int c = int.Parse(Console.ReadLine());
+
+switch (c)
+{
+    case 0:
+        Console.WriteLine("Unavailable choice.");
+        break;
+    case 1:
+        Console.WriteLine(a+b);
+        break;
+    case 2:
+        Console.WriteLine(a-b);
+        break;
+    case 3:
+        Console.WriteLine(a*b);
+        break;
+    case 4:
+        Console.WriteLine(a/b);
+        break;
+    case 5:
+        break;
+
+
+    default:
+        break;
+}
+
+
+
+
+
+
 
 
 
